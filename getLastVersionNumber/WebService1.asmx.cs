@@ -5,8 +5,9 @@ using System.Web;
 using System.Web.Services;
 using System.Data;
 using Newtonsoft.Json;
-using System.Data;
-using System.Data.SqlClient;
+using System.Text;
+using System.IO;
+
 
 namespace getLastVersionNumber
 {
@@ -20,27 +21,35 @@ namespace getLastVersionNumber
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
     {
-        DataTable idVersions = new DataTable();
-      
-       
+        //DataTable idVersions = new DataTable();
 
-        
+
+
+
+        //[WebMethod]
+        //idVersions.Columns.Add("Version");
+
+        //idVersions.Rows.Add("1", "v0.1");
+        //idVersions.Rows.Add("2", "v0.2");
+        //idVersions.Rows.Add("3", "v0.2.5");
+        //idVersions.Rows.Add("4", "v1.2");
+        //idVersions.Rows.Add("5", "v2.5");
+        //idVersions.Rows.Add("6", "v3");
+
+        //return JsonConvert.SerializeObject(idVersions);
+        //}
 
         [WebMethod]
-        public string idVersion()
+        public string IDVersion()
         {
-            idVersions.Columns.Add("id");
-            idVersions.Columns.Add("Version");
 
-            idVersions.Rows.Add("1", "v0.1");
-            idVersions.Rows.Add("2", "v0.2");
-            idVersions.Rows.Add("3", "v0.2.5");
-            idVersions.Rows.Add("4", "v1.2");
-            idVersions.Rows.Add("5", "v2.5");
-            idVersions.Rows.Add("6", "v3");
 
-            return JsonConvert.SerializeObject(idVersions);
+            String st = File.ReadAllText(@"C:\Users\sejjilali\source\repos\WebserviceProdware\getLastVersionNumber\idVersions.json");
+
+
+            return st;
         }
-
     }
+
 }
+
