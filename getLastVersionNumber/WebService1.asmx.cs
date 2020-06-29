@@ -28,9 +28,11 @@ namespace getLastVersionNumber
         public string IDVersion()
         {
 
-
+            //chemin vers le fchier JSON à UPDATE
             String json = File.ReadAllText(@"C:\Users\sejjilali\source\repos\WebserviceProdware\getLastVersionNumber\idVersions.json");
 
+
+            //Conversion du fichier JSON et Call de la dernière entrée
             var lastVersion = JArray.Parse(json).Last().ToString();
 
             return lastVersion;
