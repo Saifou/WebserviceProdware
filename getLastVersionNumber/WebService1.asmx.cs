@@ -31,7 +31,7 @@ namespace getLastVersionNumber
 
             String json = File.ReadAllText(@"C:\Users\sejjilali\source\repos\WebserviceProdware\getLastVersionNumber\idVersions.json");
 
-            var test = JToken.Parse(json).Last().ToString();
+            var test = JArray.Parse(json).Last().ToString();
 
             return test;
         }
