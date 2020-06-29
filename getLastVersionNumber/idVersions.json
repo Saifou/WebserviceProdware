@@ -1,37 +1,39 @@
-[
-  {
-    "id": 1,
-    "version": 0.1
+{
+  "Versions": [
+    {
+      "id": 1,
+      "version": 0.1
 
-  },
-  {
-    "id": 2,
-    "version": 0.5
-  },
-  {
-    "id": 3,
-    "version": 0.8
+    },
+    {
+      "id": 2,
+      "version": 0.5
+    },
+    {
+      "id": 3,
+      "version": 0.8
 
-  },
-  {
-    "id": 4,
-    "version": 1
+    },
+    {
+      "id": 4,
+      "version": 0.5
 
-  },
-  {
-    "id": 5,
-    "version": 1.6
+    },
+    {
+      "id": 5,
+      "version": 0.5
 
-  },
-  {
-    "id": 6,
-    "version": 2.2
+    },
+    {
+      "id": 6,
+      "version": 0.5
 
-  },
-  {
-    "id": 7,
-    "version": 3
+    },
+    {
+      "id": 7,
+      "version": 1.1
 
-  }
+    }
 
-]
+  ]
+}

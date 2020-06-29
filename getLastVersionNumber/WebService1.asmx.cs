@@ -7,7 +7,7 @@ using System.Data;
 using Newtonsoft.Json;
 using System.Text;
 using System.IO;
-
+using Newtonsoft.Json.Linq;
 
 namespace getLastVersionNumber
 {
@@ -21,33 +21,19 @@ namespace getLastVersionNumber
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
     {
-        //DataTable idVersions = new DataTable();
-
-
-
-
-        //[WebMethod]
-        //idVersions.Columns.Add("Version");
-
-        //idVersions.Rows.Add("1", "v0.1");
-        //idVersions.Rows.Add("2", "v0.2");
-        //idVersions.Rows.Add("3", "v0.2.5");
-        //idVersions.Rows.Add("4", "v1.2");
-        //idVersions.Rows.Add("5", "v2.5");
-        //idVersions.Rows.Add("6", "v3");
-
-        //return JsonConvert.SerializeObject(idVersions);
-        //}
+        
 
         [WebMethod]
+
         public string IDVersion()
         {
 
 
-            String st = File.ReadAllText(@"C:\Users\sejjilali\source\repos\WebserviceProdware\getLastVersionNumber\idVersions.json");
+            String json = File.ReadAllText(@"C:\Users\sejjilali\source\repos\WebserviceProdware\getLastVersionNumber\idVersions.json");
 
+            var test = JToken.Parse(json).Last().ToString();
 
-            return st;
+            return test;
         }
     }
 
