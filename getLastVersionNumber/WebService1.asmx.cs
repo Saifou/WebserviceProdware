@@ -29,7 +29,7 @@ namespace getLastVersionNumber
         {
 
             //chemin vers le fchier JSON à UPDATE
-            String json = File.ReadAllText(@"C:\Users\sejjilali\source\repos\WebserviceProdware\getLastVersionNumber\idVersions.json");
+            String json = File.ReadAllText(@"./idVersions.json");
 
 
             //Conversion du fichier JSON et Call de la dernière entrée
